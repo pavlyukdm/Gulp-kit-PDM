@@ -11,7 +11,7 @@ Thumbs.db
 *.log*
 node_modules/
 reports/
-/dist/
+/dist/img/
 /app/img/
 
 # Папка с собранными файлами проекта
