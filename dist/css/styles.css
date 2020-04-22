@@ -1,4 +1,20 @@
 body {
-  font: italic 700 26px/2 sans-serif;
-  color: red;
+  background: #34afaa;
+  font-size: 16px;
+  color: #000;
+}
+
+#test {
+  font: 700 3em/1.5 sans-serif;
+  padding: 2em 3em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#test .inverted {
+  color: #18252b;
+}
+
+#test .awesome {
+  text-decoration: underline;
 }
