@@ -13,6 +13,7 @@ node_modules/
 reports/
 /dist/img/
 /app/img/
+/app/images-cache/
 
 # Папка с собранными файлами проекта
 # build/
