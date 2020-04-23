@@ -9,6 +9,6 @@ require('./gulp/tasks/watch')
 require('./gulp/tasks/imageMinify')
 
 gulp.task("default", gulp.series(
-	gulp.parallel("imageMinifyTinyPNG", "imageMinifyImagemin", "html", "styles:main", "styles:libs", "js:main", "js:libs", "fonts"),
+	gulp.parallel("imageMinifyTinyPNG", "imageMinifyImagemin", "styles:main", "styles:libs", "js:main", "js:libs", "html", "fonts"),
 	gulp.parallel("serve")
 ))
