@@ -7,8 +7,8 @@ const autoprefixer = require('gulp-autoprefixer')
 const rename = require('gulp-rename')
 const plumber = require('gulp-plumber')
 
-module.exports = 	gulp.task('styles', function () {
-	return gulp.src('app/styles/*.scss')
+module.exports = 	gulp.task('styles:main', function () {
+	return gulp.src('app/styles/styles.scss')
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass())
@@ -18,11 +18,34 @@ module.exports = 	gulp.task('styles', function () {
 		.pipe(cleancss({
 			level: {
 				2: {
-					all: true
+					all: true,
+					removeUnusedAtRules: false
 				}
 			}
 		}))
-		.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write('/'))
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('dist/css/'))
+})
+
+module.exports = 	gulp.task('styles:libs', function () {
+	return gulp.src('app/styles/libs.scss')
+		.pipe(plumber())
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(shorthand())
+		.pipe(cleancss({
+			level: {
+				2: {
+					all: true,
+					removeUnusedAtRules: false,
+				}
+			}
+		}))
+		.pipe(sourcemaps.write('/'))
 		.pipe(rename({
 			suffix: '.min'
 		}))
