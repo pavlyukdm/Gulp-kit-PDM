@@ -13,8 +13,8 @@ module.exports = 	gulp.task('styles:main', function () {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(autoprefixer())
-		.pipe(shorthand())
 		.pipe(gulp.dest('dist/css/'))
+		.pipe(shorthand())
 		.pipe(cleancss({
 			level: {
 				2: {
