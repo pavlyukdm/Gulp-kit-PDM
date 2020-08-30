@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "gulp-file-include": "^2.2.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-plumber": "^1.2.1",
     "gulp-ttf2woff": "^1.1.1",
