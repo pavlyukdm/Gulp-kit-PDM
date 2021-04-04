@@ -3,10 +3,11 @@ const concat = require('gulp-concat')
 const sourcemaps = require('gulp-sourcemaps')
 const rename = require('gulp-rename')
 const jslibspath = require('../../app/js/libs')
+const paths = require('../paths')
 
 module.exports = gulp.task('js:main', function () {
-	return gulp.src('app/js/main.js')
-		.pipe(gulp.dest('dist/js/'))
+	return gulp.src(paths.src.js)
+		.pipe(gulp.dest(paths.build.js))
 })
 
 module.exports = gulp.task('js:libs', function () {
@@ -17,5 +18,5 @@ module.exports = gulp.task('js:libs', function () {
 		.pipe(rename({
 			suffix: '.min'
 		}))
-		.pipe(gulp.dest('dist/js/'))
+		.pipe(gulp.dest(paths.build.js))
 })

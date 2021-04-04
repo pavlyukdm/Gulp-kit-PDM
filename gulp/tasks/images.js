@@ -2,9 +2,11 @@ const gulp = require('gulp')
 const imagemin = require('gulp-imagemin')
 const imageminPngquant = require('imagemin-pngquant')
 const cache = require('gulp-cache')
+const paths = require('../paths')
 
 module.exports = gulp.task('imagemin', function () {
-	return gulp.src('./app/img/**/*.{gif,svg,png,jpg,jpeg}')
+	// return gulp.src('./app/img/**/*.{gif,svg,png,jpg,jpeg}')
+	return gulp.src(paths.src.images)
 		.pipe( cache(
 			imagemin([
 				imagemin.gifsicle({
@@ -30,5 +32,5 @@ module.exports = gulp.task('imagemin', function () {
 			])
 			)
 		)
-		.pipe(gulp.dest('dist/img'))
+		.pipe(gulp.dest(paths.build.images))
 })
