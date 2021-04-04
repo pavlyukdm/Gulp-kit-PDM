@@ -12,8 +12,7 @@ module.exports = 	gulp.task('serve', function (cb) {
 	gulp.watch("app/styles/**/*", gulp.series("styles:libs", cb => gulp.src('dist/css').pipe(browserSync.stream()).on('end', cb)));
 	gulp.watch("app/js/**/*", gulp.series("js:main")).on('change', browserSync.reload);
 	gulp.watch("app/js/**/*", gulp.series("js:libs")).on('change', browserSync.reload);
-	gulp.watch("app/img/**/*", 	gulp.series("imageMinifyTinyPNG")).on('change', browserSync.reload);
-	gulp.watch("app/img/**/*", 	gulp.series("imageMinifyImagemin")).on('change', browserSync.reload);
+	gulp.watch("app/img/**/*", 	gulp.series("imagemin")).on('change', browserSync.reload);
 
 	return cb
 })
