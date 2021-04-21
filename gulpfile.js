@@ -12,6 +12,6 @@ require('./gulp/tasks/watch')
 
 gulp.task("default", gulp.series(
 	"clean",
-	gulp.parallel("imagemin", "styles:main", "styles:libs", "js:main", "js:libs", "html", "fonts"),
+	gulp.parallel("imagemin", "styles:main", "styles:libs", "js", "html", "fonts"),
 	gulp.parallel("serve")
 ))
