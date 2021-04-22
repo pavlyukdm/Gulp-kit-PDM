@@ -27,9 +27,11 @@ module.exports = 	gulp.task('styles:main', function () {
 			}
 		}))
 		.pipe(sourcemaps.write('/'))
-		.pipe(rename({
-			suffix: '.min'
-		}))
+		.pipe(rename(function(path) {
+			if (!path.extname.endsWith('.map')) {
+					path.basename += '.min';
+			}
+	}))
 		.pipe(gulp.dest(paths.build.css))
 })
 
@@ -49,8 +51,10 @@ module.exports = 	gulp.task('styles:libs', function () {
 			}
 		}))
 		.pipe(sourcemaps.write('/'))
-		.pipe(rename({
-			suffix: '.min'
-		}))
+		.pipe(rename(function(path) {
+			if (!path.extname.endsWith('.map')) {
+					path.basename += '.min';
+			}
+	}))
 		.pipe(gulp.dest(paths.build.css))
 })
