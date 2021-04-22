@@ -8,11 +8,12 @@ const paths = require('../paths')
 
 module.exports = gulp.task('js:main', function () {
 	return gulp.src(paths.src.js)
-		.pipe(gulp.dest(paths.build.js))
+		.pipe(gulp.dest(paths.build.jsMain))
 })
 
 module.exports = gulp.task('js:libs', function () {
 	return gulp.src(jslibspath())
+//If you need to move js libs without concatenation and minifying - comment next lines....
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(concat('libs.js', {newLine: '\r\n'}))
@@ -22,5 +23,6 @@ module.exports = gulp.task('js:libs', function () {
 					path.basename += '.min';
 			}
 	}))
-		.pipe(gulp.dest(paths.build.js))
+// ...till here
+		.pipe(gulp.dest(paths.build.jsVendor))
 })

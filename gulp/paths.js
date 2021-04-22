@@ -17,7 +17,8 @@ module.exports = {
   build: {
     html: 'dist/',
     css: 'dist/css/',
-    js: 'dist/js/',
+    jsMain: 'dist/js/',
+    jsVendor: 'dist/js/vendor/',
     images: 'dist/img',
     fonts: 'dist/fonts/',
   },
