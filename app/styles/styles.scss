@@ -3,20 +3,24 @@
 @import "grid.scss";
 @import "vars.scss";
 
+@import "components/titles.scss";
+
 
 body {
-	font-size: 16px;
-	color: #000;
 	background-color: #34afaa;
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 100%;
+	color: #000;
 }
 #test {
-	font-size: 3em;
-	font-family: sans-serif;
-	font-weight: 700;
-	line-height: 1.5;
 	padding: 2em 3em;
-	color: #fff;
 	text-transform: uppercase;
+	font-family: sans-serif;
+	font-size: 3em;
+	line-height: 1.5;
+	font-weight: 700;
+	color: #fff;
 	.inverted{
 		color: #18252b;
 	}
