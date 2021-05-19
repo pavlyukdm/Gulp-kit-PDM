@@ -6,7 +6,7 @@
 module.exports = function jslibs (){
 	return [
 		'./node_modules/jquery/dist/jquery.js',
-		// './node_modules/jquery-validation/dist/jquery.validate.js',
+		'./node_modules/jquery-validation/dist/jquery.validate.js',
 	];
 }
 
