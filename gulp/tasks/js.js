@@ -3,11 +3,15 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
 const sourcemaps = require('gulp-sourcemaps')
 const rename = require('gulp-rename')
+const babel = require('gulp-babel')
 const jslibspath = require('../../app/js/libs')
 const paths = require('../paths')
 
 module.exports = gulp.task('js:main', function () {
 	return gulp.src(paths.src.js)
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
 		.pipe(gulp.dest(paths.build.jsMain))
 })
 
