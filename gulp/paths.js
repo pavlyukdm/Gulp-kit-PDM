@@ -3,7 +3,7 @@ module.exports = {
     html: 'app/[^_]*.html',
     cssMain: 'app/styles/styles.scss',
     cssLibs: 'app/styles/libs.scss',
-    js: 'app/js/main.js',
+    js: 'app/js/scripts.js',
     images: 'app/img/**/*',
     fonts: 'app/fonts/**/*',
   },
