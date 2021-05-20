@@ -1,7 +1,6 @@
-(function () {
-	console.log('main.js is included - OK!');
-})();
-
+@@include('scripts/js_wrap_start.js')
+@@include('scripts/scripts.js')
+@@include('scripts/js_wrap_end.js');
 
 // Form Validation
 (function () {

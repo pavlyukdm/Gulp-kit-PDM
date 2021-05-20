@@ -4,8 +4,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 (function () {
   console.log('main.js is included - OK!');
-})(); // Form Validation
+})();
 
+; // Form Validation
 
 (function () {
   $("#test_form").validate();
