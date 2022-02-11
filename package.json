@@ -32,7 +32,7 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "imagemin-pngquant": "^9.0.2",
-    "node-sass": "^6.0.0"
+    "node-sass": "^7.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
